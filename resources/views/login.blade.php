@@ -36,7 +36,16 @@
    <!----END OF WELCOME MESSAGE ------------- -->
    <!-----------------LOGIN FORM BEGINS----------------------- -->
    <div class="col-lg-12">
-       
+    @if(Session::has('error'))
+    <div class="alert alert-danger">{{ Session::get('error') }}</div>
+    @endif
+    @if(Session::has('errors'))
+    <div class="alert alert-danger">
+      @foreach($errors->all() as $error)
+        {{ $error }}
+      @endforeach
+    </div>
+    @endif    
     <div class="col-lg-6" id="selections">
       <div class="panel panel-primary">
         <div class="panel-heading"><h3 class="h3">Login</h3></div>                
@@ -78,46 +87,48 @@
         <div class="panel panel-success">
           <div class="panel-heading"><h3 class="h3">Sign up</h3></div>                
             <div class="panel-body">
-              <div class="input-group">
-                <span class="input-group-addon " id="sizing-addon2">
-                  <i class="glyphicon glyphicon-user"></i>
-                </span>
-                <input type="text" class="form-control" placeholder="Username" id="inputboxes" aria-describedby="sizing-addon2">
-              </div>                
-              <div class="input-group">
-                <span class="input-group-addon " id="sizing-addon2">
-                  <i class="glyphicon glyphicon-envelope"></i>
-                </span>
-                <input name="email" type="email" class="form-control" placeholder="Email" id="inputboxes" aria-describedby="sizing-addon2">
-              </div>
-              <div class="input-group">
-                <span class="input-group-addon " id="sizing-addon2">
-                  <i class="fa fa-key"></i>
-                </span>
-                <input name="password" type="password" class="form-control" placeholder="Password" id="inputboxes" aria-describedby="sizing-addon2">
-              </div>
-              <div class="input-group">
-                <span class="input-group-addon " id="sizing-addon2">
+              {!! Form::open(['url' => url('signup')]) !!}
+                <div class="input-group">
+                  <span class="input-group-addon " id="sizing-addon2">
+                    <i class="glyphicon glyphicon-user"></i>
+                  </span>
+                  <input name="username" type="text" class="form-control" placeholder="Username" id="inputboxes" aria-describedby="sizing-addon2">
+                </div>          
+                <div class="input-group">
+                  <span class="input-group-addon " id="sizing-addon2">
+                    <i class="glyphicon glyphicon-envelope"></i>
+                  </span>
+                  <input name="email" type="email" class="form-control" placeholder="Email" id="inputboxes" aria-describedby="sizing-addon2">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon " id="sizing-addon2">
                     <i class="fa fa-key"></i>
                   </span>
-                  <input type="password" class="form-control" placeholder="Confirm Password" id="inputboxes" aria-describedby="sizing-addon2">
-              </div>                  
-              <div class="input-group">
-                <span class="input-group-addon " id="sizing-addon2">
-                  <i class="fa fa-get-pocket"></i>
-                </span>
-                <select class="form-control">
-                  <option value="--Select--">How did your about us?</option>
-                  <option value="google">Google</option>
-                  <option value="Bing">Bing</option>
-                  <option value="Teacher">Teacher</option>
-                  <option value="Friends">Friends</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-              <div class="input-group center-block ">
-                <input type="submit" class="btn btn-lg btn-success" id="inputboxes" value="Sign Up"/>                        
-              </div>                
+                  <input name="password" type="password" class="form-control" placeholder="Password" id="inputboxes" aria-describedby="sizing-addon2">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon " id="sizing-addon2">
+                      <i class="fa fa-key"></i>
+                    </span>
+                    <input name="password_confirmation" type="password" class="form-control" placeholder="Confirm Password" id="inputboxes" aria-describedby="sizing-addon2">
+                </div>                  
+                <div class="input-group">
+                  <span class="input-group-addon " id="sizing-addon2">
+                    <i class="fa fa-get-pocket"></i>
+                  </span>
+                  <select class="form-control">
+                    <option value="--Select--">How did your about us?</option>
+                    <option value="google">Google</option>
+                    <option value="Bing">Bing</option>
+                    <option value="Teacher">Teacher</option>
+                    <option value="Friends">Friends</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="input-group center-block ">
+                  <input type="submit" class="btn btn-lg btn-success" id="inputboxes" value="Sign Up"/>                        
+                </div>
+            {!! Form::close() !!}              
             </div>    
         </div>        
        </div>

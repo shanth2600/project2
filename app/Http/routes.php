@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('login');
 });
 
 Route::get('login',function(){
@@ -20,3 +20,5 @@ Route::get('login',function(){
 });
 
 Route::post('login','UserController@login');
+
+Route::post('signup','UserController@createUser');
