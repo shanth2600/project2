@@ -26,7 +26,7 @@
               <ul class="nav navbar-nav">             
                 <li class=""><a href="#">Home</a></li>             
                 <li class=""><a href="#">About this app</a></li>             
-                <li class=""><a href="#">paint</a></li>
+                <li class=""><a href="{{ url('canvas') }}">paint</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div>
@@ -47,6 +47,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
-    <script src="assets/js/bootstrap.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     </body>
 </html>
