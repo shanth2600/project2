@@ -24,3 +24,5 @@ Route::get('canvas','CanvasController@index');
 Route::post('login','UserController@login');
 
 Route::post('signup','UserController@createUser');
+
+Route::get('profile','ProfileController@index');
