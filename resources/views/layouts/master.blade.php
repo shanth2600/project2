@@ -11,6 +11,27 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     </head>
 <body>
+    <div class="container">
+      <nav class="navbar navbar-inverse">
+          <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>         
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">             
+                <li class=""><a href="#">Home</a></li>             
+                <li class=""><a href="#">About this app</a></li>             
+                <li class=""><a href="#">paint</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+    </div>    
 	@yield('content')
 </body>
 <footer class="container-fluid" id="footer">
@@ -25,7 +46,6 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
 
     <script src="assets/js/bootstrap.min.js"></script>    
     </body>

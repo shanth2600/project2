@@ -31,6 +31,7 @@ class UserController extends Controller
 
         if(Auth::attempt($credentials)){
             
+            return redirect('canvas');
         }else{
 
             return redirect()->back()->withError('Email, password mismatch.');

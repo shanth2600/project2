@@ -19,6 +19,8 @@ Route::get('login',function(){
 	return view('login');
 });
 
+Route::get('canvas','CanvasController@index');
+
 Route::post('login','UserController@login');
 
 Route::post('signup','UserController@createUser');
