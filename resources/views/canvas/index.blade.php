@@ -23,6 +23,11 @@
           </button>
           <ul class="dropdown-menu">
             <li><a href="#"><i class="fa fa-file-image-o"></i>&nbsp;New</a></li>
+            {!! Form::open(['id' => 'imageUploader' ,'url' => 'image']) !!}
+            <input type="hidden" value="johnny" name="xx">
+            <input name="canvas-image" type="file" class="hidden" id="uploadFile"/>
+            {!! Form::close() !!}
+            <li id="file-upload"><a style="cursor:pointer"><i class="fa fa-file-image-o"></i>&nbsp;Upload</a></li>
             <li><a href="#"><i class="fa fa-folder-open-o"></i>&nbsp;Open</a></li>
             <li><a href="#"><i class="fa fa-floppy-o"></i>&nbsp;Save</a></li>
             <li><a href="#"><i class="fa fa-print"></i>&nbsp;Print</a></li>
