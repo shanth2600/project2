@@ -37,7 +37,11 @@ class ImageController extends Controller
     public function store(Request $request)
     {
         if($request->hasFile('canvas-image')){
-            return 'ya';
+            $path = 'assets/images/';
+            $fileName = 'tmp.jpg';
+            $request->file('canvas-image')->move($path,$fileName);
+
+            return $path.$fileName;
         }else{
             return 'no';
         }

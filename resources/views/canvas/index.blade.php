@@ -113,7 +113,7 @@
         </div>             
       </div>    
       <div class="col-lg-7">
-        <canvas id="paintcan">                 
+        <canvas width="500px" height="500px" style="border:1px solid black" id="paintcan">                 
         </canvas>            
       </div>                                      
       <div class="col-lg-3">                          

@@ -45,7 +45,13 @@ $(document).ready(function(){
 			contentType: false,
 			data:new FormData(this),
 			success:function(data){
-				alert(data);
+				var background = new Image();
+				background.src = data;
+				background.onload = function(){
+					var canvas = document.getElementById('paintcan');
+					var ctx = canvas.getContext("2d");
+					ctx.drawImage(background,0,0);   
+				}
 			}
 		});		
 
