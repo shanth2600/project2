@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Models\Profile;
+
 class ProfileController extends Controller
 {
     /**
@@ -15,8 +17,8 @@ class ProfileController extends Controller
      */
     public function index()
     {
+        
         //
-        return view("profile.index");
     }
 
     /**
@@ -48,7 +50,8 @@ class ProfileController extends Controller
      */
     public function show($id)
     {
-        //
+        $profile = Profile::findOrFail($id);
+        return view("profile.show",compact('profile'));
     }
 
     /**

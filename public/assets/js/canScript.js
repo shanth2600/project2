@@ -1,11 +1,4 @@
-var canvas = document.getElementById('paintcan');
-var context = canvas.getContext('2d');
 
-var radius = 100;
-//document.getElementById('textInput').value;
-var dragging = false;
-
-context.lineWidth = radius*2;
 
 var putPoint = function(e){
 	if(dragging){
@@ -33,9 +26,6 @@ var disengage = function(){
 	context.beginPath();
 }
 
-canvas.addEventListener('mousedown', engage);
-canvas.addEventListener('mousemove', putPoint);
-canvas.addEventListener('mouseup', disengage);
 
 //change color
 function change(e)
@@ -52,3 +42,20 @@ function updateTextInput(val) {
 	document.getElementById('textInput').value = val; 
 }
 //end change size
+
+var canvas = document.getElementById('paintcan');
+
+if(canvas){
+	var context = canvas.getContext('2d');
+
+	var radius = 100;
+	//document.getElementById('textInput').value;
+	var dragging = false;
+
+	context.lineWidth = radius*2;
+
+
+	canvas.addEventListener('mousedown', engage);
+	canvas.addEventListener('mousemove', putPoint);
+	canvas.addEventListener('mouseup', disengage);	
+}

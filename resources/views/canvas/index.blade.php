@@ -119,7 +119,7 @@
       <div class="col-lg-3">                          
         <div class="panel panel-default">
           <ul class="nav nav-pills" role="tablist">
-            <li role="presentation"><a href="#">Profile</a></li>
+            <li role="presentation"><a href="{{ url('profile/'.Auth::user()->id) }}">Profile</a></li>
             <li role="presentation"><a href="#">Messages <span class="badge">0</span></a></li>
           </ul>
         </div>

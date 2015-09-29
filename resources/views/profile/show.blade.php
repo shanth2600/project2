@@ -8,6 +8,7 @@
   <li role="presentation"><a href="#">Profile</a></li>
   <li role="presentation"><a href="#">Messages</a></li>
 </ul>
+<h1>{{ $profile->display_name }}</h1>
 </div>    
     
 

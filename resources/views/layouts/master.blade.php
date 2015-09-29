@@ -5,9 +5,9 @@
          <meta charset="UTF-8"> 
         <title>Home</title> 
         <!-- Bootstrap core CSS -->
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-        <link href="assets/css/main.css" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link href="{{ url('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ url('assets/css/main.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url('assets/css/font-awesome.min.css') }}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     </head>
 <body>

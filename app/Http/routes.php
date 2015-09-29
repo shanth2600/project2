@@ -27,4 +27,4 @@ Route::post('login','UserController@login');
 
 Route::post('signup','UserController@createUser');
 
-Route::get('profile','ProfileController@index');
+Route::get('profile/{id}','ProfileController@show');
