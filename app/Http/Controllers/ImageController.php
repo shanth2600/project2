@@ -6,9 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Models\Template;
-
-class CanvasController extends Controller
+class ImageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +15,7 @@ class CanvasController extends Controller
      */
     public function index()
     {
-        $templates = Template::all();
-        return view('canvas.index',compact('templates'));
+        //
     }
 
     /**
@@ -39,7 +36,15 @@ class CanvasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($request->hasFile('canvas-image')){
+            $path = 'assets/images/';
+            $fileName = 'tmp.jpg';
+            $request->file('canvas-image')->move($path,$fileName);
+
+            return $path.$fileName;
+        }else{
+            return 'no';
+        }
     }
 
     /**

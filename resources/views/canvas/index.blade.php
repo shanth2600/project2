@@ -23,6 +23,11 @@
           </button>
           <ul class="dropdown-menu">
             <li><a href="#"><i class="fa fa-file-image-o"></i>&nbsp;New</a></li>
+            {!! Form::open(['id' => 'imageUploader' ,'url' => 'image']) !!}
+            <input type="hidden" value="johnny" name="xx">
+            <input name="canvas-image" type="file" class="hidden" id="uploadFile"/>
+            {!! Form::close() !!}
+            <li id="file-upload"><a style="cursor:pointer"><i class="fa fa-file-image-o"></i>&nbsp;Upload</a></li>
             <li><a href="#"><i class="fa fa-folder-open-o"></i>&nbsp;Open</a></li>
             <li><a href="#"><i class="fa fa-floppy-o"></i>&nbsp;Save</a></li>
             <li><a href="#"><i class="fa fa-print"></i>&nbsp;Print</a></li>
@@ -108,7 +113,7 @@
         </div>             
       </div>    
       <div class="col-lg-7">
-        <canvas id="paintcan">                 
+        <canvas width="500px" height="500px" style="border:1px solid black" id="paintcan">                 
         </canvas>            
       </div>                                      
       <div class="col-lg-3">                          
@@ -117,6 +122,11 @@
             <li role="presentation"><a href="#">Profile</a></li>
             <li role="presentation"><a href="#">Messages <span class="badge">0</span></a></li>
           </ul>
+        </div>
+        <div class="templates-container">
+          @foreach($templates as $template)
+            <span class="template-container" style="background:url('{{ $template->url }}')" data-url="{{ $template->url }}"></span>
+          @endforeach
         </div>
       </div>
      </div>    

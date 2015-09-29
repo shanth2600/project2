@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html class="no-js" data-url="{{ url('/') }}" data-token="{{ csrf_token() }}" lang="en">
     <head>
          <meta charset="UTF-8"> 
         <title>Home</title> 
@@ -48,5 +48,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="{{ url('assets/js/scripts.js') }}"></script>
+    <script src="{{ url('assets/js/canScript.js') }}"></script>
     </body>
 </html>
