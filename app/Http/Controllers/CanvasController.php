@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Models\Template;
+
 class CanvasController extends Controller
 {
     /**
@@ -15,7 +17,8 @@ class CanvasController extends Controller
      */
     public function index()
     {
-        return view('canvas.index');
+        $templates = Template::all();
+        return view('canvas.index',compact('templates'));
     }
 
     /**

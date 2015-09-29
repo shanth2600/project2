@@ -17,7 +17,6 @@ $.ajaxSetup({
 $(document).ready(function(){
 
 
-
 	$("#file-upload").click(function(){
 		$("#uploadFile").click();
 	});    
@@ -36,6 +35,23 @@ $(document).ready(function(){
 		}
 	});
 
+	var drawToCanvas = function(url){
+		var background = new Image();
+			background.src = url;
+			background.onload = function(){
+				var canvas = document.getElementById('paintcan');
+				var ctx = canvas.getContext("2d");
+				ctx.clearRect(0, 0, 500, 500);
+				ctx.drawImage(background,0,0);
+			}
+
+	}
+
+	$('.template-container').click(function(e){
+		url = $(e.target).data('url');
+		drawToCanvas(url);
+	});
+
 	$('#imageUploader').submit(function(e){
 		e.preventDefault();
 		$.ajax({
@@ -44,14 +60,8 @@ $(document).ready(function(){
 			processData: false,
 			contentType: false,
 			data:new FormData(this),
-			success:function(data){
-				var background = new Image();
-				background.src = data;
-				background.onload = function(){
-					var canvas = document.getElementById('paintcan');
-					var ctx = canvas.getContext("2d");
-					ctx.drawImage(background,0,0);   
-				}
+			success:function(data){				 
+				drawToCanvas(data);
 			}
 		});		
 

@@ -123,6 +123,11 @@
             <li role="presentation"><a href="#">Messages <span class="badge">0</span></a></li>
           </ul>
         </div>
+        <div class="templates-container">
+          @foreach($templates as $template)
+            <span class="template-container" style="background:url('{{ $template->url }}')" data-url="{{ $template->url }}"></span>
+          @endforeach
+        </div>
       </div>
      </div>    
 </div>
