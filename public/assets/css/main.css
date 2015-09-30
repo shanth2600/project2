@@ -11,13 +11,11 @@ body{
    
  
 }
-.container{
+.body_container{
     
-    width: 85%;
-    margin: 0 auto;
-    text-align: center;
+ min-height: 200px;
 }
-#main_wapper{
+/*#main_wapper{
      background-image: url("../images/photography.png");
          width: 83%;
          margin-bottom: 90px;
@@ -25,7 +23,7 @@ body{
          padding-bottom: 2%;
          
 
-}
+}*/
 #welcome{
         text-align: center;
      margin-bottom: 30px;
@@ -43,7 +41,7 @@ body{
     background-color:  #101010;
     height: 100px;
     margin-bottom: 2px;
-    border-radius: 5px;
+    
 }
 .footer ul {
     float: left;
@@ -54,19 +52,18 @@ body{
     
 }
 #footer{
-    
-    width: 85%;
-    margin: 0 auto;
+  
+    margin-top: 100px;
      
     
 }
-#paintcan{
+/*#paintcan{
     margin-top: 10px;
     width: 100%;
     height: 500px;
     border: 1px solid #245269;
     background-color: #f5f5f5;
-}
+}*/
 #options{
     margin-top: 30px;
     background-color: white;
@@ -110,3 +107,15 @@ body{
 #pink{background-color: pink;}
 #drakgray{background-color: darkgray;}
 #lime{background-color: lime;}
+
+
+#divs1 div{
+    
+    margin-top: 10px;
+    
+}
+#divs2 div{
+    
+    margin-top: 10px;
+    
+}

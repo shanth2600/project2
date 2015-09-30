@@ -33,15 +33,15 @@
               <div class="clearfix">
                 <div class="input-group">
                   <span class="input-group-addon " id="sizing-addon2">
-                      <i class="glyphicon glyphicon-user"></i>
+                      <i class="fa fa-user"></i>
                   </span>
-                  <input name="email" type="text" class="form-control" placeholder="Email" id="inputboxes" aria-describedby="sizing-addon2">
+                  <input name="email" type="text" class="form-control" placeholder="Email" id="loginusername" aria-describedby="sizing-addon2">
                 </div>
                   <div class="input-group">
                     <span class="input-group-addon" id="sizing-addon3">
                         <i class="fa fa-key"></i>
                     </span>
-                    <input name="password" type="password" class="form-control" placeholder="Password" id="inputboxes" aria-describedby="sizing-addon2">
+                    <input name="password" type="password" class="form-control" placeholder="Password" id="loginpass" aria-describedby="sizing-addon2">
                   </div>
                   <div class="pull-left">
                     <a href="#">Forgotten your username?</a>
@@ -50,14 +50,14 @@
                     <a href="#">Forgotten your password?</a>
                   </div>
                   <div class="input-group center-block">
-                    <input type="submit" class="btn btn-lg btn-default" id="inputboxes" value="Log in"/>                      
+                    <input type="submit" class="btn btn-lg btn-default" id="loginsubmit" value="Log in"/>                      
                   </div>
               </div>
             {!! Form::close() !!}
           </div>          
         </div>
         <div class="center-block">
-           <a href="#" class="alert-link" >Authenticate later &nbsp;<i class="fa fa-forward"></i></a>
+           <a href="{{ url('canvas') }}" class="alert-link" >Authenticate later &nbsp;<i class="fa fa-forward"></i></a>
         </div>
        </div>
      <!------------------LOGIN ENDS HERE------------------------- -->
@@ -69,27 +69,27 @@
               {!! Form::open(['url' => url('signup')]) !!}
                 <div class="input-group">
                   <span class="input-group-addon " id="sizing-addon2">
-                    <i class="glyphicon glyphicon-user"></i>
+                    <i class="fa fa-user"></i>
                   </span>
-                  <input name="username" type="text" class="form-control" placeholder="Username" id="inputboxes" aria-describedby="sizing-addon2">
+                  <input name="username" type="text" class="form-control" placeholder="Username" id="signupusername" aria-describedby="sizing-addon2">
                 </div>          
                 <div class="input-group">
                   <span class="input-group-addon " id="sizing-addon2">
                     <i class="glyphicon glyphicon-envelope"></i>
                   </span>
-                  <input name="email" type="email" class="form-control" placeholder="Email" id="inputboxes" aria-describedby="sizing-addon2">
+                  <input name="email" type="email" class="form-control" placeholder="Email" id="signupemail" aria-describedby="sizing-addon2">
                 </div>
                 <div class="input-group">
                   <span class="input-group-addon " id="sizing-addon2">
                     <i class="fa fa-key"></i>
                   </span>
-                  <input name="password" type="password" class="form-control" placeholder="Password" id="inputboxes" aria-describedby="sizing-addon2">
+                  <input name="password" type="password" class="form-control" placeholder="Password" id="signuppass1" aria-describedby="sizing-addon2">
                 </div>
                 <div class="input-group">
                   <span class="input-group-addon " id="sizing-addon2">
                       <i class="fa fa-key"></i>
                     </span>
-                    <input name="password_confirmation" type="password" class="form-control" placeholder="Confirm Password" id="inputboxes" aria-describedby="sizing-addon2">
+                    <input name="password_confirmation" type="password" class="form-control" placeholder="Confirm Password" id="signuppass2" aria-describedby="sizing-addon2">
                 </div>                  
                 <div class="input-group">
                   <span class="input-group-addon " id="sizing-addon2">
@@ -105,7 +105,7 @@
                   </select>
                 </div>
                 <div class="input-group center-block ">
-                  <input type="submit" class="btn btn-lg btn-success" id="inputboxes" value="Sign Up"/>                        
+                  <input type="submit" class="btn btn-lg btn-success" id="signupsumbit" value="Sign Up"/>                        
                 </div>
             {!! Form::close() !!}              
             </div>    

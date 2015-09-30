@@ -11,7 +11,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     </head>
 <body>
-    <div class="container">
+   
       <nav class="navbar navbar-inverse">
           <div class="container">
             <div class="navbar-header">
@@ -24,21 +24,21 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
               <ul class="nav navbar-nav">             
-                <li class=""><a href="#">Home</a></li>             
-                <li class=""><a href="#">About this app</a></li>             
+                <li class=""><a href="{{ url('login') }}">Home</a></li>             
+                <li class=""><a href="about">About this app</a></li>             
                 <li class=""><a href="{{ url('canvas') }}">paint</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div>
         </nav>
-    </div>    
+        
 	@yield('content')
 </body>
-<footer class="container-fluid" id="footer">
+<footer  id="footer">
 	<div class="footer col-lg-12">
 	    <div class="col-lg-4">
 	    <ul>
-	        <li><a href="index.php">Home</a></li>
+	        <li><a href="{{ url('login') }}">Home</a></li>
 	    </ul>
 	    </div>
 	</div>
