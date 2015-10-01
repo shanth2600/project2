@@ -49,6 +49,9 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="{{ url('assets/js/scripts.js') }}"></script>
+    <!-- 
     <script src="{{ url('assets/js/canScript.js') }}"></script>
+    -->
+    <script src="{{ url('assets/js/canvasScript.js') }}"></script>
     </body>
 </html>

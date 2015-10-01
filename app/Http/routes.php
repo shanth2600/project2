@@ -19,6 +19,8 @@ Route::get('login',function(){
 	return view('login');
 });
 
+Route::post('project','ProjectController@store');
+
 Route::resource('image','ImageController');
 
 Route::get('canvas','CanvasController@index');

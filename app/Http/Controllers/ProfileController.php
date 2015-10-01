@@ -51,7 +51,8 @@ class ProfileController extends Controller
     public function show($id)
     {
         $profile = Profile::findOrFail($id);
-        return view("profile.show",compact('profile'));
+        $projects = $profile->user->projects;
+        return view("profile.show",compact('profile','projects'));
     }
 
     /**

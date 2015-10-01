@@ -16,6 +16,24 @@ $.ajaxSetup({
 
 $(document).ready(function(){
 
+	$('#save-button').click(function(){
+		var canvas = $('#canvas')[0];
+		var dataURL = canvas.toDataURL();
+		$.ajax({
+			url:'project',
+			method:'POST',
+			data:{
+				project:dataURL
+			},
+			success:function(data){
+				alert('Saved');
+			}
+		});
+	});
+
+	$('#color-button').click(function(){
+		$('#color').click();
+	});
 
 	$("#file-upload").click(function(){
 		$("#uploadFile").click();
@@ -39,10 +57,10 @@ $(document).ready(function(){
 		var background = new Image();
 			background.src = url;
 			background.onload = function(){
-				var canvas = document.getElementById('paintcan');
+				var canvas = document.getElementById('canvas');
 				var ctx = canvas.getContext("2d");
-				ctx.clearRect(0, 0, 500, 500);
-				ctx.drawImage(background,0,0);
+				ctx.clearRect(0, 0, 700, 700);
+				ctx.drawImage(background,0,0,700,500);
 			}
 
 	}
@@ -60,7 +78,7 @@ $(document).ready(function(){
 			processData: false,
 			contentType: false,
 			data:new FormData(this),
-			success:function(data){				 
+			success:function(data){			 
 				drawToCanvas(data);
 			}
 		});		

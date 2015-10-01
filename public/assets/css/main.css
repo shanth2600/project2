@@ -22,7 +22,18 @@ body{
     display:inline-block;
     width:120px;
     height:120px;
-    background-size:100% auto;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+.project-container{
+    border:1px solid black;
+    display:inline-block;
+    width:700px;
+    height:500px;
+    background-size:contain;
+    background-repeat: no-repeat;    
+
 }
 
 .container{
